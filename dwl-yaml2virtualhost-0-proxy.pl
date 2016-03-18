@@ -17,8 +17,8 @@ for (my $i = 0; $i < @{$projects}; $i++) {
     ServerAdmin contact@davaskweblimited.com
     ProxyPreserveHost On
     ServerName ' . $projects->[$i]->{env}->[$y]->{subdomain} . '.' . $projects->[$i]->{domain} . '
-    ProxyPass / http://62.210.239.172:80' . $projects->[$i]->{env}->[$y]->{port} . '/
-    ProxyPassReverse / http://62.210.239.172:80' . $projects->[$i]->{env}->[$y]->{port} . '/
+    ProxyPass / http://62.210.239.172:' . $projects->[$i]->{env}->[$y]->{port} . '/
+    ProxyPassReverse / http://62.210.239.172:' . $projects->[$i]->{env}->[$y]->{port} . '/
 </VirtualHost>
 ';
         close $fh;
