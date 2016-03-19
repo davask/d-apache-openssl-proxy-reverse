@@ -1,4 +1,4 @@
-FROM davask/apache2
+FROM davask/d-apache2
 MAINTAINER davask <contact@davaskweblimited.com>
 
 LABEL dwl.server.proxy="apache2"
