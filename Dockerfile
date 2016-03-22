@@ -28,3 +28,4 @@ COPY ./dwl-yaml2virtualhost-0-proxy.pl /tmp/dwl-yaml2virtualhost-0-proxy.pl
 COPY ./dwl-env2yaml-0-proxy.sh /tmp/dwl-env2yaml-0-proxy.sh
 COPY ./dwl-init-2-proxy-reverse.sh /tmp/dwl-init-2-proxy-reverse.sh
 
+VOLUME /etc/apache2/sites-enabled
