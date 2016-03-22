@@ -9,11 +9,8 @@ ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update
 
 RUN apt-get install -y apache2-utils
-RUN apt-get install -y cpanminus
 
 RUN rm -rf /var/lib/apt/lists/*
-
-RUN cpanm YAML::XS
 
 RUN a2enmod proxy
 RUN a2enmod proxy_http
