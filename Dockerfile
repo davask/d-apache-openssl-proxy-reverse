@@ -1,15 +1,10 @@
-FROM davask/d-apache2
+FROM davask/d-apache2:latest
 MAINTAINER davask <contact@davaskweblimited.com>
 
 LABEL dwl.server.proxy="apache2"
 
-# disable interactive functions
-ENV DEBIAN_FRONTEND noninteractive
-
 RUN apt-get update
-
 RUN apt-get install -y apache2-utils
-
 RUN rm -rf /var/lib/apt/lists/*
 
 RUN a2enmod proxy
