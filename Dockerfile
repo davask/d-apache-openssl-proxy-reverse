@@ -19,5 +19,5 @@ RUN a2enmod xml2enc
 # Copy instantiation specific file
 COPY ./proxy-reverse.sh $DWL_INIT_DIR/$DWL_INIT_COUNT-proxy-reverse.sh
 # update counter for next container
-RUN DWL_INIT_COUNT=$(($DWL_INIT_COUNT+1))
+ENV DWL_INIT_COUNT $(($DWL_INIT_COUNT+1))
 
