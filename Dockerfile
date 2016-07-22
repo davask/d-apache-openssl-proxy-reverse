@@ -1,18 +1,20 @@
-FROM davask/d-apache2:2.4-u14.04
+FROM davask/d-apache2-proxy-reverse:2.4-u14.04
 MAINTAINER davask <contact@davaskweblimited.com>
 
-LABEL dwl.server.proxy="proxy"
+RUN wget https://dl.eff.org/certbot-auto
+RUN chmod a+x certbot-auto
+RUN echo 'y\n' | ./certbot-auto
+# /etc/letsencrypt/accounts
+# https://letsencrypt.org/documents/LE-SA-v1.0.1-July-27-2015.pdf
+RUN certbot-auto certonly --webroot -w /var/www/html -d davaskweblimited.com
 
-RUN a2enmod proxy
-RUN a2enmod proxy_http
-RUN a2enmod proxy_ajp
-RUN a2enmod deflate
-RUN a2enmod proxy_balancer
-RUN a2enmod proxy_connect
-RUN a2enmod proxy_html
-RUN a2enmod xml2enc
+RUN rm -rf /var/lib/apt/lists/*
 
-# Declare instantiation counter
-ENV DWL_INIT_COUNT 2
-# Copy instantiation specific file
-COPY ./proxy-reverse.sh $DWL_INIT_DIR/$DWL_INIT_COUNT-proxy-reverse.sh
+
+# configure tsl
+RUN a2enmod ssl
+
+RUN mkdir /etc/apache2/ssl
+RUN echo 'FR\n.\nLyon\ndavask web limited\nIT\ndavaskweblimited.com\nadmin@davaskweblimited.com\n' | openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/apache2/ssl/apache.key -out /etc/apache2/ssl/apache.crt
+
+COPY ./sites-available /etc/apache2/sites-available
