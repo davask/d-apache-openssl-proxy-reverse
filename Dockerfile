@@ -1,11 +1,7 @@
-FROM davask/d-apache2:latest
+FROM davask/d-apache2:d-apache2:2.4-u14.04
 MAINTAINER davask <contact@davaskweblimited.com>
 
-LABEL dwl.server.proxy="apache2"
-
-RUN apt-get update
-RUN apt-get install -y apache2-utils
-RUN rm -rf /var/lib/apt/lists/*
+LABEL dwl.server.proxy="proxy"
 
 RUN a2enmod proxy
 RUN a2enmod proxy_http
@@ -20,4 +16,3 @@ RUN a2enmod xml2enc
 ENV DWL_INIT_COUNT 2
 # Copy instantiation specific file
 COPY ./proxy-reverse.sh $DWL_INIT_DIR/$DWL_INIT_COUNT-proxy-reverse.sh
-
