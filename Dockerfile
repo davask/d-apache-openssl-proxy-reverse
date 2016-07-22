@@ -6,10 +6,9 @@ RUN chmod a+x certbot-auto
 RUN echo 'y\n' | ./certbot-auto
 # /etc/letsencrypt/accounts
 # https://letsencrypt.org/documents/LE-SA-v1.0.1-July-27-2015.pdf
-RUN certbot-auto certonly --webroot -w /var/www/html -d davaskweblimited.com
+RUN certbot-auto certonly --webroot -w /var/www/html -d dev.davaskweblimited.com
 
 RUN rm -rf /var/lib/apt/lists/*
-
 
 # configure tsl
 RUN a2enmod ssl
