@@ -14,6 +14,6 @@ RUN rm -rf /var/lib/apt/lists/*
 RUN a2enmod ssl
 
 RUN mkdir /etc/apache2/ssl
-# RUN echo 'FR\n.\nLyon\ndavask web limited\nIT\ndavaskweblimited.com\nadmin@davaskweblimited.com\n' | openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/apache2/ssl/apache.key -out /etc/apache2/ssl/apache.crt
+# RUN printf 'FR\n.\nLyon\ndavask web limited\nIT\ndavaskweblimited.com\nadmin@davaskweblimited.com\n' | openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/apache2/ssl/apache.key -out /etc/apache2/ssl/apache.crt
 
 COPY ./sites-available /etc/apache2/sites-available
