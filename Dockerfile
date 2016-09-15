@@ -15,5 +15,3 @@ RUN a2enmod proxy_balancer
 RUN a2enmod proxy_connect
 RUN a2enmod proxy_html
 RUN a2enmod xml2enc
-
-COPY ./tmp/dwl/init.sh /tmp/dwl/init.sh
