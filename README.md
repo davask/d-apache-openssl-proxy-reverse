@@ -37,6 +37,8 @@
 
 Test your encryption with this url : "https://www.ssllabs.com/ssltest/analyze.html?d=${DWL_USER_DNS}&latest" once the container is up & running
 
+TODO : pass through proxy port 443 to access webapp with certificate on webapp server, see http://www.zeitoun.net/articles/client-certificate-x509-authentication-behind-reverse-proxy/start for some infos
+
 ### Proxy activation
 
 ## LABEL
