@@ -61,6 +61,8 @@ Define openssl
 
 Test your encryption with this url : "https://www.ssllabs.com/ssltest/analyze.html?d=${DWL_USER_DNS}&latest" once the container is up & running
 
+### Proxy activation
+
 ## LABEL
 > dwl.server.os="ubuntu 14.04"
 
