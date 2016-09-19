@@ -1,4 +1,4 @@
-d-apache2-proxy-reverse-openssl:
+d-apache2-openssl-proxy-reverse:
   ports:
   - 443:443/tcp
   - 80:80/tcp
@@ -17,7 +17,7 @@ d-apache2-proxy-reverse-openssl:
     io.rancher.scheduler.affinity:host_label: dwl=dwlComPrivate
   tty: true
   hostname: dev.davaskweblimited.com
-  image: davask/d-apache2-proxy-reverse-openssl:2.4-u14.04
+  image: davask/d-apache2-openssl-proxy-reverse:2.4-u14.04
   volumes:
   - /home/dwl/dwl-monitoring/proxy/sites-enabled:/etc/apache2/sites-enabled
   - /home/dwl/dwl-monitoring/proxy/tmp:/home/dwl/tmp
