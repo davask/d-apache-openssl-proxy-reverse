@@ -12,7 +12,7 @@ d-apache2-openssl-proxy-reverse:
   labels:
     io.rancher.scheduler.affinity:host_label: dwl=dwlComPrivate
   tty: true
-  hostname: proxy-reverse-openssl
+  hostname: proxy-reverse-openssl.davaskweblimited.com
   image: davask/d-apache2-openssl-proxy-reverse:2.4-u14.04
   volumes:
   - /home/dwl/projects/factory/docker-dev/files:/home/dwl/files
