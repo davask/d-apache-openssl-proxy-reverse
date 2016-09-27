@@ -1,17 +1,13 @@
-FROM davask/d-apache2-openssl:2.4-u14.04
-MAINTAINER davask <contact@davaskweblimited.com>
-USER root
+FROM davask/d-apache-openssl:2.4-u16.04
+MAINTAINER davask <docker@davaskweblimited.com>
 LABEL dwl.server.proxy="proxy"
 
-# declare container type
-ENV DWL_INIT proxy
-
 # install proxy
-RUN a2enmod proxy
-RUN a2enmod proxy_http
-RUN a2enmod proxy_ajp
-RUN a2enmod deflate
-RUN a2enmod proxy_balancer
-RUN a2enmod proxy_connect
-RUN a2enmod proxy_html
-RUN a2enmod xml2enc
+RUN /bin/bash -c 'a2enmod proxy'
+RUN /bin/bash -c 'a2enmod proxy_http'
+RUN /bin/bash -c 'a2enmod proxy_ajp'
+RUN /bin/bash -c 'a2enmod deflate'
+RUN /bin/bash -c 'a2enmod proxy_balancer'
+RUN /bin/bash -c 'a2enmod proxy_connect'
+RUN /bin/bash -c 'a2enmod proxy_html'
+RUN /bin/bash -c 'a2enmod xml2enc'
