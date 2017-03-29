@@ -1,4 +1,15 @@
-d-apache-openssl-proxy-reverse:
+#/usr/bin/env bash
+
+branch=${1};
+parentBranch=${2};
+rootDir=${3};
+buildDir=${4};
+
+######################
+# docker-compose.yml #
+######################
+
+echo "d-apache-openssl-proxy-reverse:
   ports:
   - 80:80/tcp
   - 2222:22/tcp
@@ -18,11 +29,13 @@ d-apache-openssl-proxy-reverse:
   log_driver: syslog
   labels:
     io.rancher.scheduler.affinity:host_label: dwl=dwlComPrivate
-  image: davask/d-apache-openssl-proxy-reverse:2.4-u14.04
+  image: davask/d-apache-openssl-proxy-reverse:${branch}
   hostname: private.davaskweblimited.com
   volumes:
-  - /home/dwl/docker-images/proxy/d-apache-openssl-proxy-reverse/volumes/home/username/files:/home/username/files
-  - /home/dwl/docker-images/proxy/d-apache-openssl-proxy-reverse/volumes/home/username/http/app/sites-available:/etc/apache2/sites-available
-  - /home/dwl/docker-images/proxy/d-apache-openssl-proxy-reverse/volumes/etc/apache2/ssl:/etc/apache2/ssl
+  - ${rootDir}/volumes/home/username/files:/home/username/files
+  - ${rootDir}/volumes/home/username/http/app/sites-available:/etc/apache2/sites-available
+  - ${rootDir}/volumes/etc/apache2/ssl:/etc/apache2/ssl
   working_dir: /var/www/html
+" > ${rootDir}/docker-compose.yml
 
+echo "docker-compose.yml generated with apache-proxy-reverse:${branch}";
