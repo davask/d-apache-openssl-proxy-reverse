@@ -20,7 +20,7 @@ buildDir=`readlink -m "${thisDir}/build"`;
 
 sudo docker build -t davask/d-apache-openssl-proxy-reverse:${branch} ${thisDir};
 
-echo "sudo docker run --name d-apache-openssl-proxy-reverse -tdi -p 80:80/tcp -p 2222:22/tcp -p 443:443/tcp --label io.rancher.scheduler.affinity:host_label=dwl=dwlComPrivate davask/d-apache-openssl-proxy-reverse:${branch}";
-echo "http://public.ginkgo-migration.com:6408/env/1a5/apps/add-service?environmentId=&containerId=";
+echo "sudo docker run --name d-apache-openssl-proxy-reverse -tdi -p 80:80/tcp -p 2222:22/tcp -p 443:443/tcp davask/d-apache-openssl-proxy-reverse:${branch}";
+
 
 exit 1;

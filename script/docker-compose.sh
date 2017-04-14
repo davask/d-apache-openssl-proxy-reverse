@@ -21,20 +21,20 @@ echo "d-apache-openssl-proxy-reverse:
     DWL_LOCAL_LANG: en_US:en
     DWL_USER_NAME: username
     DWL_SSH_ACCESS: 'true'
+    DWL_SHIELD_HTTP: 'false'
     DWL_SSLKEY_C: EU
     DWL_SSLKEY_ST: France
     DWL_SSLKEY_L: Vannes
     DWL_SSLKEY_O: davask web limited - docker container
     DWL_SSLKEY_CN: davaskweblimited.com
-  log_driver: syslog
-  labels:
-    io.rancher.scheduler.affinity:host_label: dwl=dwlComPrivate
   image: davask/d-apache-openssl-proxy-reverse:${branch}
-  hostname: private.davaskweblimited.com
+  hostname: localhost
+  net: bridge
   volumes:
-  - ${rootDir}/volumes/home/username/files:/home/username/files
+  - ${buildDir}/etc/apache2/ssl:/etc/apache2/ssl
+  - ${rootDir}/volumes/proxy/log/localhost/apache2:/var/log/apache2
   - ${rootDir}/volumes/home/username/http/app/sites-available:/etc/apache2/sites-available
-  - ${rootDir}/volumes/etc/apache2/ssl:/etc/apache2/ssl
+  - ${rootDir}/volumes/home/username/files:/home/username/files
   working_dir: /var/www/html
 " > ${rootDir}/docker-compose.yml
 
