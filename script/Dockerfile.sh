@@ -26,7 +26,6 @@ RUN a2enmod proxy_connect
 RUN a2enmod proxy_html
 RUN a2enmod xml2enc
 
-COPY ./build/dwl/default/etc/apache2/sites-available/0000-docker.davaskweblimited.com-443.conf /dwl/default/etc/apache2/sites-available/0000-docker.davaskweblimited.com-443.conf
 ' >> ${rootDir}/Dockerfile
 
 echo "Dockerfile generated with Apache:${branch}";
