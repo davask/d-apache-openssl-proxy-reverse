@@ -5,7 +5,9 @@
     "logo": "https://www.nbs-system.com/wp-content/uploads/4.-RP.png",
     "image": "davask/d-apache-openssl-proxy-reverse:2.4-u14.04",
     "ports": [
-        "22/tcp"
+        "22/tcp",
+        "80/tcp",
+        "443/tcp"
     ],
     "env": [
         {
@@ -59,11 +61,11 @@
         }
     ],
     "volumes": [
-        "/home/username,
-/var/log/apache2,
-/etc/apache2/sites-available,
-/etc/apache2/ssl,
-/etc/letsencrypt"
+        "/home/username",
+        "/var/log/apache2",
+        "/etc/apache2/sites-available",
+        "/etc/apache2/ssl",
+        "/etc/letsencrypt"
     ]
   }
 ]
