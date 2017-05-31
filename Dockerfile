@@ -1,5 +1,6 @@
 FROM davask/d-apache-openssl:2.4-u14.04
 MAINTAINER davask <docker@davaskweblimited.com>
+USER root
 LABEL dwl.server.proxy="proxy"
 
 # http://stackoverflow.com/questions/7312215/is-there-a-way-to-remove-apaches-reverse-proxy-request-headers?answertab=votes#tab-top
@@ -15,4 +16,5 @@ RUN a2enmod proxy_connect
 RUN a2enmod proxy_html
 RUN a2enmod xml2enc
 
+USER admin
 
