@@ -12,7 +12,7 @@ buildDir=${4};
 echo "d-apache-openssl-proxy-reverse:
   ports:
   - 80:80/tcp
-  - 2222:22/tcp
+  - 6409:22/tcp
   - 443:443/tcp
   environment:
     DWL_LOCAL: en_US.UTF-8
