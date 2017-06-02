@@ -16,5 +16,6 @@ RUN a2enmod proxy_connect
 RUN a2enmod proxy_html
 RUN a2enmod xml2enc
 
+RUN chown root:sudo -R /dwl
 USER admin
 
