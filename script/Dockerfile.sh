@@ -18,14 +18,15 @@ echo '
 # https://www.x4b.net/kb/RealIP-Apache
 
 # install proxy
-RUN a2enmod proxy
-RUN a2enmod proxy_http
-RUN a2enmod proxy_ajp
-RUN a2enmod deflate
-RUN a2enmod proxy_balancer
-RUN a2enmod proxy_connect
-RUN a2enmod proxy_html
-RUN a2enmod xml2enc
+RUN a2enmod \
+proxy \
+proxy_http \
+proxy_ajp \
+deflate \
+proxy_balancer \
+proxy_connect \
+proxy_html \
+xml2enc
 
 RUN chown root:sudo -R /dwl
 USER admin
