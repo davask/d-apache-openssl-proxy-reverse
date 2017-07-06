@@ -18,6 +18,8 @@ app:
     DWL_SSLKEY_L: 'Vannes'
     DWL_SSLKEY_O: 'davask web limited - docker container'
     DWL_SSLKEY_CN: 'davaskweblimited.com'
+    DWL_CERTBOT_EMAIL: 'admin@localhost'
+    DWL_CERTBOT_DEBUG: 'true'
   tty: true
   hostname: localhost
   image: davask/d-apache-openssl-proxy-reverse:2.4-u14.04
@@ -27,5 +29,6 @@ app:
     - ./volumes/var/log/apache2:/var/log/apache2
     - ./volumes/etc/apache2/sites-available:/etc/apache2/sites-available
     - ./volumes/etc/apache2/ssl:/etc/apache2/ssl
+    - ./volumes/etc/letsencrypt:/etc/letsencrypt
 
 # export COMPOSE_HTTP_TIMEOUT=600; docker-compose -f /home/dwl/docker-images/proxy/d-apache-openssl-proxy-reverse/docker-compose.yml up -d

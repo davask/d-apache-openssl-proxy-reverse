@@ -28,12 +28,15 @@
 - DWL_SSLKEY_O: 'davask web limited - docker container'
 - DWL_SSLKEY_CN: 'davaskweblimited.com'
 - APACHE_SSL_DIR: '/etc/apache2/ssl'
+- DWL_CERTBOT_EMAIL: 'admin@localhost'
+- DWL_CERTBOT_DEBUG: 'true'
 ## Available volumes
 
 - /home/username
 - /var/log/apache2
 - /etc/apache2/sites-available
 - /etc/apache2/ssl
+- /etc/letsencrypt
 ## LABEL
 
 - dwl.server.os="apache-openssl 2.4-u14.04"
