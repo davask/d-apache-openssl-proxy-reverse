@@ -20,7 +20,7 @@
 - APACHE_LOG_DIR: '/var/log/apache2'
 - APACHE_RUN_DIR: '/var/run/apache2'
 - DWL_HTTP_SERVERADMIN: 'admin@localhost'
-- DWL_HTTP_DOCUMENTROOT: '/var/www/html'
+- DWL_HTTP_DOCUMENTROOT: '/var/www'
 - DWL_HTTP_SHIELD: 'false'
 - DWL_SSLKEY_C: 'EU'
 - DWL_SSLKEY_ST: 'France'
@@ -28,15 +28,9 @@
 - DWL_SSLKEY_O: 'davask web limited - docker container'
 - DWL_SSLKEY_CN: 'davaskweblimited.com'
 - APACHE_SSL_DIR: '/etc/apache2/ssl'
-- DWL_CERTBOT_EMAIL: 'admin@localhost'
-- DWL_CERTBOT_DEBUG: 'true'
 ## Available volumes
 
-- /home/username
-- /var/log/apache2
-- /etc/apache2/sites-available
-- /etc/apache2/ssl
-- /etc/letsencrypt
+- /home/host
 ## LABEL
 
 - dwl.server.os="apache-openssl 2.4-d8.8"
