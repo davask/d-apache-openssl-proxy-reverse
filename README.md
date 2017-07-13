@@ -1,6 +1,5 @@
 # dockerfile
 
-[![[dwl] apache-openssl-proxy-reverse:2.4-d8.8 license][badge-travis]](https://travis-ci.org/davask/d-apache-openssl-proxy-reverse)
 [![[dwl] apache-openssl-proxy-reverse:2.4-d8.8 in prod][badge-shields]](https://hub.docker.com/r/davask/d-apache-openssl-proxy-reverse/)
 [![[dwl] apache-openssl-proxy-reverse:2.4-d8.8 license][badge-license]](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fdavask%2Fd-apache-openssl-proxy-reverse?ref=badge_shield)
 
@@ -9,7 +8,6 @@
 [badge-docker]: https://dockeri.co/image/davask/d-apache-openssl-proxy-reverse "[dwl] apache-openssl-proxy-reverse:2.4-d8.8 image"
 [badge-shields]: https://img.shields.io/badge/davask%2Fd--apache--openssl--proxy--reverse-env_prod-brightgreen.svg?style=flat "[dwl] apache-openssl-proxy-reverse:2.4-d8.8 in prod"
 [badge-license]: https://img.shields.io/badge/davask%2Fd--apache--openssl--proxy--reverse-license_MIT-brightgreen.svg?style=flat "[dwl] apache-openssl-proxy-reverse:2.4-d8.8 license"
-[badge-travis]: https://travis-ci.org/davask/d-apache-openssl-proxy-reverse.svg?branch=2.4-d8.8 "[dwl] apache-openssl-proxy-reverse:2.4-d8.8 license"
 
 ## Exposed port
 
