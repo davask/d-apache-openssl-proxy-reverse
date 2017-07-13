@@ -6,8 +6,8 @@
 [![[dwl] apache-openssl-proxy-reverse:2.4-d8.8 image][badge-docker]](https://hub.docker.com/r/davask/d-apache-openssl-proxy-reverse/)
 
 [badge-docker]: https://dockeri.co/image/davask/d-apache-openssl-proxy-reverse "[dwl] apache-openssl-proxy-reverse:2.4-d8.8 image"
-[badge-shields]: https://img.shields.io/badge/davask%2Fd--apache--openssl--proxy--reverse-prod-brightgreen.svg?style=flat "[dwl] apache-openssl-proxy-reverse:2.4-d8.8 in prod"
-[badge-fossa]: https://img.shields.io/badge/davask%2Fd--apache--openssl--proxy--reverse-license--MIT-brightgreen.svg?style=flat "[dwl] apache-openssl-proxy-reverse:2.4-d8.8 license"
+[badge-shields]: https://img.shields.io/badge/davask%2Fd--apache--openssl--proxy--reverse-env prod-brightgreen.svg?style=flat "[dwl] apache-openssl-proxy-reverse:2.4-d8.8 in prod"
+[badge-fossa]: https://img.shields.io/badge/davask%2Fd--apache--openssl--proxy--reverse-license MIT-brightgreen.svg?style=flat "[dwl] apache-openssl-proxy-reverse:2.4-d8.8 license"
 
 ## Exposed port
 
