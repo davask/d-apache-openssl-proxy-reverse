@@ -1,13 +1,13 @@
 # dockerfile
 
 [![[dwl] apache-openssl-proxy-reverse:2.4-d8.8 in prod][badge-shields]](https://hub.docker.com/r/davask/d-apache-openssl-proxy-reverse/)
-[![FOSSA Status][badge-fossa]](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fdavask%2Fd-apache-openssl-proxy-reverse?ref=badge_shield)
+[![[dwl] apache-openssl-proxy-reverse:2.4-d8.8 license][badge-fossa]](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fdavask%2Fd-apache-openssl-proxy-reverse?ref=badge_shield)
 
 [![[dwl] apache-openssl-proxy-reverse:2.4-d8.8 image][badge-docker]](https://hub.docker.com/r/davask/d-apache-openssl-proxy-reverse/)
 
 [badge-docker]: https://dockeri.co/image/davask/d-apache-openssl-proxy-reverse "[dwl] apache-openssl-proxy-reverse:2.4-d8.8 image"
 [badge-shields]: https://img.shields.io/badge/davask%2Fd--apache--openssl--proxy--reverse-prod-brightgreen.svg?style=flat "[dwl] apache-openssl-proxy-reverse:2.4-d8.8 in prod"
-[badge-fossa]: https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2Fdavask%2Fd-apache-openssl-proxy-reverse.svg?type=shield "[dwl] apache-openssl-proxy-reverse:2.4-d8.8 license"
+[badge-fossa]: https://img.shields.io/badge/davask%2Fd--apache--openssl--proxy--reverse-license--MIT-brightgreen.svg?style=flat "[dwl] apache-openssl-proxy-reverse:2.4-d8.8 license"
 
 ## Exposed port
 
